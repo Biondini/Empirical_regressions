@@ -42,3 +42,7 @@ The provided code performs a series of analyses on seismic catalogs to study the
 
 ## 7. **Repeating the Analysis for Other Periods and Datasets:**
 - The filtering, regression, and result-saving process is repeated for other datasets from different time periods and regions.
+
+## **Important Notes:**
+- Input datasets should be placed in the `data` folder.
+- After executing the `Main_code`, the results will be saved in the `results` folder.
