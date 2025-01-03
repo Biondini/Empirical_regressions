@@ -46,3 +46,14 @@ The provided code performs a series of analyses on seismic catalogs to study the
 ## **Important Notes:**
 - Input datasets should be placed in the `data` folder.
 - After executing the `Main_code`, the results will be saved in the `results` folder.
+
+### Data and Resources
+- **New Zealand Seismic Catalog**: The dataset re-evaluated by Christoffersen et al. (2024) is available at [http://doi.org/10.21420/tap4-5s59](http://doi.org/10.21420/tap4-5s59). It contains data on 452,848 earthquakes from 1460 to December 31, 2020, in the file *“Cat_NSHM_magnitudes-revised_August22.csv”*.  
+
+- **Italian Seismic Dataset**: Compiled by Lolli et al. (2020), this dataset is accessible at [https://horus.ingv.it](https://horus.ingv.it). The file *“HORUS_Ita_DataOrigin.txt”* includes data on approximately 490,000 earthquakes from 1981 to the present and is updated hourly using INGV ISIDe web services.
+
+## References
+Lolli, B. & Gasperini, P., 2012. A comparison among general orthogonal regression methods applied to earthquakes magnitude conversions, Geophys. J. Int., 190, 1135–1151, doi: 10.1111/j.1365-246X.2012.05530.x.
+
+Christophersen, A., Bourguignon, S., Rhoades, D. A., Allen, T. I., Ristau, J., Salichon, J.,   Rollins, J. C., Townend, J., and Gerstenberger, M. C. (2024). Standardizing Earthquake Magnitudes for the 2022 Revision of the Aotearoa New Zealand National Seismic Hazard Model, Bull. Seismol. Soc. Am. 114, no. 1, 111–136, doi: 10.1785/0120230169.
+
