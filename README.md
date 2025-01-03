@@ -1,7 +1,7 @@
 <center>
   
 # The role of “equation error” in empirical regressions for seismic magnitude conversions
-## Paolo Gasperini<sup>1,2</sup>, Barbara Lolli<sup>2,*</sup> and Emanuele Biondini<sup>1</sup>
+## Paolo Gasperini<sup>1,2</sup>, Emanuele Biondini<sup>1</sup> and Barbara Lolli<sup>2,*</sup>
 
 ### <sup>1</sup>Dipartimento di Fisica e Astronomia, Universita’ di Bologna (Italy)
 ### <sup>2</sup>Istituto Nazionale di Geofisica e Vulcanologia, Sezione di Bologna (Italy)
