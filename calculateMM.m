@@ -49,7 +49,10 @@ function results = calculateMM(x, y, Su_values, Se_values)
             warning('Some values in the y input were non-numeric and have been replaced with NaN.');
         end
     end
-
+    
+    % Calculate the mean of y and x
+    mean_y = mean(y);
+    mean_x = mean(x);
     % Calculate the variance of x
     S2x = var(x);
     
@@ -77,10 +80,6 @@ function results = calculateMM(x, y, Su_values, Se_values)
             
             % Calculate b_MM (slope coefficient using the Method of Moments)
             b_MM = Sxy / (S2x - S2u);
-            
-            % Calculate the mean of y and x
-            mean_y = mean(y);
-            mean_x = mean(x);
             
             % Calculate a_MM (intercept using the Method of Moments)
             a_MM = mean_y - b_MM * mean_x;

@@ -58,7 +58,10 @@ function results = calculateEIV(x, y, Su_values, Se_values)
         end
     end
 
-
+    % Calculate the means of x and y
+    mean_y = mean(y);
+    mean_x = mean(x);
+            
     % Calculate the variance of the independent variable x
     S2x = var(x);
     
@@ -93,11 +96,7 @@ function results = calculateEIV(x, y, Su_values, Se_values)
             % Calculate the slope coefficient (b_EIV) using the Errors-in-Variables method
             b_EIV = (S2y - (eta * S2x) + sqrt((S2y - (eta * S2x))^2 + (4 * eta * Sxy^2))) / ...
                 (2 * Sxy);
-            
-            % Calculate the means of x and y
-            mean_y = mean(y);
-            mean_x = mean(x);
-            
+              
             % Calculate the intercept (a_EIV) using the Errors-in-Variables method
             a_EIV = mean_y - b_EIV * mean_x;
     

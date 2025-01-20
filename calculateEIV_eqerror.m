@@ -54,7 +54,8 @@ function results = calculateEIV_eqerror(x, y, Su_values, Se_values)
         end
     end
 
-
+    mean_y = mean(y);
+    mean_x = mean(x);
     % Calculate the variance of x
     S2x = var(x);
     
@@ -104,8 +105,7 @@ function results = calculateEIV_eqerror(x, y, Su_values, Se_values)
                 eta = (S2e + S2q) / S2u;
                 b_EIV_corr = (S2y - (eta * S2x) + sqrt((S2y - (eta * S2x))^2 + (4 * eta * ...
                     Sxy^2))) / (2 * Sxy);
-                mean_y = mean(y);
-                mean_x = mean(x);
+
                 a_EIV_corr = mean_y - b_EIV_corr * mean_x;
                 
                 % Calculate errors on the parameters (Fuller 1987, Lolli & Gasperini 2012)
