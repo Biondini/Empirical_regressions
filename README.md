@@ -50,7 +50,7 @@ The provided code performs a series of analyses on seismic catalogs to study the
 ### Data and Resources
 - **New Zealand Seismic Catalog**: The dataset re-evaluated by Christoffersen et al. (2024) is available at [http://doi.org/10.21420/tap4-5s59](http://doi.org/10.21420/tap4-5s59). It contains data on 452,848 earthquakes from 1460 to December 31, 2020, in the file *“Cat_NSHM_magnitudes-revised_August22.csv”*.  
 
-- **Italian Seismic Dataset**: Compiled by Lolli et al. (2020), this dataset is accessible at [https://horus.ingv.it](https://horus.ingv.it). The file *“HORUS_Ita_DataOrigin.txt”* includes data on approximately 490,000 earthquakes from 1981 to the present and is updated hourly using INGV ISIDe web services.
+- **Italian Seismic Dataset**: Compiled by Lolli et al. (2020), this dataset is accessible at [https://horus.ingv.it](https://horus.ingv.it). The file *“HORUS_Ita_DataOrigin.txt”* includes data on approximately 490,000 earthquakes from 1981 to the present and is updated hourly using INGV ISIDe web services. The HORUS catalog is also available in the `data` folder as a ZIP file, updated to January 2, 2025. To use the dataset, it must be unzipped, and the extracted content should remain in the `data` folder.  
 
 ## References
 Christophersen, A., Bourguignon, S., Rhoades, D. A., Allen, T. I., Ristau, J., Salichon, J.,   Rollins, J. C., Townend, J., and Gerstenberger, M. C. (2024). Standardizing Earthquake Magnitudes for the 2022 Revision of the Aotearoa New Zealand National Seismic Hazard Model, Bull. Seismol. Soc. Am. 114, no. 1, 111–136, doi: 10.1785/0120230169.
