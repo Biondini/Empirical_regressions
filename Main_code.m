@@ -105,7 +105,7 @@ writetable(Regression_Table, tempXlsxFilename);  % Write data to the temporary f
 movefile(tempXlsxFilename, xlsxFilename);  % Replace the original file with the temporary file
 
 % Create a graph to visualize the regression slope
-CreateGraphSlope(Regression_Table, 'MwNZ - MLNZ77');
+CreateGraphSlope(Regression_Table, 'M_{wNZ} - M_{LNZ77}');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Regression of MwNZ (New Zealand Moment Magnitude) on MLSC3 (Local Magnitude for 2012-2020)
@@ -145,7 +145,7 @@ writetable(Regression_Table, tempXlsxFilename);  % Write data to the temporary f
 movefile(tempXlsxFilename, xlsxFilename);  % Replace the original file with the temporary file
 
 % Create a graph for this regression slope
-CreateGraphSlope(Regression_Table, 'MwNZ - MLCS3');
+CreateGraphSlope(Regression_Table, 'M_{wNZ} - M_{LCS3}');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Regression of MwMT (Moment Magnitude from HORUS) on MLIside (Local Magnitude from Italy)
@@ -170,6 +170,9 @@ HORUSItaDataOrigin = HORUSItaDataOrigin(HORUSItaDataOrigin.Italia == "*", :);
 HORUSItaDataOrigin = MagnitudeFilter(HORUSItaDataOrigin, HORUSItaDataOrigin.ML, 3);
 HORUSItaDataOrigin = MagnitudeFilter(HORUSItaDataOrigin, HORUSItaDataOrigin.Mw_MT, 0);
 HORUSItaDataOrigin = DepthFilter(HORUSItaDataOrigin, -10, 40);
+mwmt=HORUSItaDataOrigin;
+HORUSItaDataOrigin = RemoveFollowingEarthquakes(HORUSItaDataOrigin, mwmt, 'origin_time', ...
+    'origin_time', 'Mw_MT', [7.0, 6.0, 5.0, 0], [4, 2, 1, 0.5]);
 
 % Standard deviations for ML and Mw magnitudes, used in regression models
 Sml = [0.024, 0.045, 0.07, 0.1, 0.12, 0.15, 0.18, 0.2];  % Standard deviations for ML
@@ -200,4 +203,5 @@ movefile(tempXlsxFilename, xlsxFilename);  % Replace the original file with the 
 
 
 % Create a graph for this regression slope
-CreateGraphSlope(Regression_Table, 'Mw - MLIside');
+CreateGraphSlope(Regression_Table, 'M_{w} - M_{LISIDe}');
+
